@@ -9,7 +9,8 @@ db.sequelize.authenticate()
   })
   .then(() => {
     console.log('🛠️ Modelos sincronizados com o banco');
-    app.listen(env.PORT, () => console.log(`Servidor rodando na porta ${env.PORT}`));
+    app.listen(env.PORT, "0.0.0.0", () =>
+      console.log(`Servidor rodando na porta ${env.PORT}`))
   })
   .catch(err => {
     console.error('Erro ao conectar com o banco:', err);
