@@ -6,8 +6,8 @@ const upload = require('../config/multer.config');
 router.get('/', UsersController.getAll);
 router.get('/search', UsersController.search);
 router.get('/:id', UsersController.getById);
-router.post('/', upload.single('imagem'), UsersController.create);
-router.put('/:id',upload.single('imagem'), UsersController.update);
+router.post('/', UsersController.create);
+router.put('/:id', UsersController.update);
 router.delete('/:id', UsersController.remove);
 
 module.exports = router;
